@@ -29,11 +29,15 @@ public class ConsoleExercises {
         String lengthInput = sc.nextLine();
         System.out.print("Width\n");
         String widthInput = sc.nextLine();
+        System.out.print("Height\n");
+        String heightInput = sc.nextLine();
         float length = Float.parseFloat(lengthInput);
         float width = Float.parseFloat(widthInput);
+        float height = Float.parseFloat(heightInput);
         float area = length * width;
         float perimeter = (2 * length) + (2 * width);
-        System.out.format("Perimeter: %.2f. Area: %.2f.", perimeter, area);
+        float volume = length * width * height;
+        System.out.format("Perimeter: %.2f. Area: %.2f. Volume: %.2f", perimeter, area, volume);
 
 //        sc.useDelimiter("\n");
     }
