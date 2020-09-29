@@ -6,11 +6,13 @@ public class ConsoleExercises {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("\nType in any number.");
-        int userInput = sc.nextInt();
-        System.out.format("\n You picked %d.",userInput);
+//        System.out.print("\nType in any number.\n");
+//        int userInput = sc.nextInt();
+//        System.out.format("\n You picked %d.",userInput);
 
-
+        System.out.print("\nType in a sentence.\n");
+        String userString = sc.nextLine();
+        System.out.format("Here's your sentence: %s.",userString);
 
     }
 }
