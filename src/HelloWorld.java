@@ -36,7 +36,7 @@ public class HelloWorld {
 //        x /= y;
 //        y -= x;
 
-        byte test = 128;
+        byte test = 127;
 //        ERROR = java: incompatible types: possible lossy conversion from int to byte, highest = 127
         short testing = 32767;
         int anotherOne = 2147483647;
