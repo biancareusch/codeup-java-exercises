@@ -26,13 +26,15 @@ public class ConsoleExercises {
 //        System.out.format("Here's your sentence: %s.",userString);
 
         System.out.print("Length\n");
-        int length = sc.nextInt();
+        String lengthInput = sc.nextLine();
         System.out.print("Width\n");
-        int width = sc.nextInt();
+        String widthInput = sc.nextLine();
+        int length = Integer.parseInt(lengthInput);
+        int width = Integer.parseInt(widthInput);
         int area = length * width;
         int perimeter = (2 * length) + (2 * width);
         System.out.format("Perimeter: %d. Area: %d.", perimeter, area);
 
-
+//        sc.useDelimiter("\n");
     }
 }
