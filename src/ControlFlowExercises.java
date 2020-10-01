@@ -21,7 +21,7 @@ public class ControlFlowExercises {
             System.out.println("Type in your numerical grade: ");
             int userInput = sc.nextInt();
 
-            if(userInput > 99){
+            if(userInput > 99 && userInput <= 100){
                 System.out.println("You have an A+!");
             } else if(userInput >= 90 && userInput < 99){
                 System.out.println("You have an A!");
@@ -47,10 +47,10 @@ public class ControlFlowExercises {
                 System.out.println("You have an D-!");
             }else if(userInput < 60){
                 System.out.println("You have an F!");
+            }else {
+                System.out.println("Not a valid numerical grade... try again");
             }
-
-
-            System.out.println("Do you want to continue? [y/N]");
+            System.out.println("Do you want to try again? [y/N]");
             String keepGoing = sc.next();
             confirmation = keepGoing.equalsIgnoreCase("y");
         } while (confirmation);
