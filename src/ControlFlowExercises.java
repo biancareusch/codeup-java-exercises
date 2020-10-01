@@ -1,26 +1,33 @@
 public class ControlFlowExercises {
     public static void main(String[] args) {
-
-//        Create a for loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
-        for (int i = 0; i <= 100; i += 2) {
-            System.out.println(i);
+//        Write a program that prints the numbers from 1 to 100.
+//        For multiples of three: print “Fizz” instead of the number.
+//        For the multiples of five: print “Buzz”.
+//        For numbers which are multiples of both three and five: print “FizzBuzz”.
+        int i = 1;
+        while (i <= 100) {
+            if (i % 3 == 0 & i % 5 == 0) {
+                System.out.println("FizzBuzz");
+            } else if (i % 5 == 0) {
+                System.out.println("Buzz");
+            } else if (i % 3 == 0) {
+                System.out.println("Fizz");
+            } else if (i % 3 != 0 && i % 5 != 0)
+                System.out.println(i);
+            i++;
         }
 
-//        Alter your loop to count backwards by 5's from 100 to -10.
-        for (int x = 100; x >= -10; x -= 5) {
-            System.out.println(x);
+//
+//        for (int x = 1; x <= 100; x++){
+//            if (i % 3 == 0 && i % 5 == 0){
+//                System.out.println("FizzBuzz");
+//            } else if (x % 3 == 0){
+//                System.out.println("Fizz");
+//            } else if(x % 5 == 0){
+//                System.out.println("Buzz");
+//            } else if(x % 3 != 0 && x % 5 != 0) {
+//                System.out.println(x);
+//            }
         }
-
-//        Create a for loop that starts at 2, and displays the number squared on each line while the number is less than
-//        1,000,000. Output should equal:
-//        2
-//        4
-//        16
-//        256
-//        65536
-        for(long num = 2; num <= 1000000; num *=num){
-            System.out.println(num);
-        }
-
     }
 }
