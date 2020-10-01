@@ -1,6 +1,7 @@
 import java.net.SocketTimeoutException;
 import java.util.Scanner;
 import java.util.SortedMap;
+import static java.lang.Float.parseFloat;
 
 public class ConsoleExercises {
     public static void main(String[] args) {
@@ -36,9 +37,9 @@ public class ConsoleExercises {
         String widthInput = sc.nextLine();
         System.out.print("Height:\n");
         String heightInput = sc.nextLine();
-        float length = Float.parseFloat(lengthInput);
-        float width = Float.parseFloat(widthInput);
-        float height = Float.parseFloat(heightInput);
+        float length = parseFloat(lengthInput);
+        float width = parseFloat(widthInput);
+        float height = parseFloat(heightInput);
         float area = length * width;
         float perimeter = (2 * length) + (2 * width);
         float volume = length * width * height;
