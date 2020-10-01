@@ -1,33 +1,32 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
-//        Write a program that prints the numbers from 1 to 100.
-//        For multiples of three: print “Fizz” instead of the number.
-//        For the multiples of five: print “Buzz”.
-//        For numbers which are multiples of both three and five: print “FizzBuzz”.
-        int i = 1;
-        while (i <= 100) {
-            if (i % 3 == 0 & i % 5 == 0) {
-                System.out.println("FizzBuzz");
-            } else if (i % 5 == 0) {
-                System.out.println("Buzz");
-            } else if (i % 3 == 0) {
-                System.out.println("Fizz");
-            } else if (i % 3 != 0 && i % 5 != 0)
-                System.out.println(i);
-            i++;
-        }
+//Prompt the user to enter an integer.
+//Display a table of squares and cubes from 1 to the value entered.
+//Ask if the user wants to continue.
+//Assume that the user will enter valid data.
+//Only continue if the user agrees to.
+        Scanner sc = new Scanner(System.in);
 
-//
-//        for (int x = 1; x <= 100; x++){
-//            if (i % 3 == 0 && i % 5 == 0){
-//                System.out.println("FizzBuzz");
-//            } else if (x % 3 == 0){
-//                System.out.println("Fizz");
-//            } else if(x % 5 == 0){
-//                System.out.println("Buzz");
-//            } else if(x % 3 != 0 && x % 5 != 0) {
-//                System.out.println(x);
-//            }
+        System.out.println("What number would you like to go up to? ");
+        long userInput = sc.nextInt();
+
+        System.out.println("Here is your table! \n");
+        System.out.println("\nnumber | squared | cubed");
+        System.out.println("-------|---------|------");
+
+        for (long num = 1; num <= userInput; num++) {
+            long resultSquared = num * num;
+            long resultCubed = num * num * num;
+
+            System.out.println(num + "      | " + resultSquared + "       | " + resultCubed);
         }
+        System.out.println("Do you want to continue? [y/N]");
+        String keepGoing = sc.next();
+        boolean confirmation = keepGoing.equalsIgnoreCase("y");
+//        if (confirmation) {
+//
+//        }
     }
 }
