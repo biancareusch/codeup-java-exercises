@@ -11,14 +11,13 @@ public class MethodsExercises {
 
         //factorial
         Boolean confirmation;
-        System.out.print("Enter a number between 1 and 10: ");
-        System.out.print(factorial(getInteger(1, 10)));
-//        do {
-//            System.out.println(factorial(getInteger(1, 10)));
-//            System.out.println("Do you want to try again? [y/N]");
-//            String keepGoing = sc.next();
-//            confirmation = keepGoing.equalsIgnoreCase("y");
-//        } while (confirmation);
+        do {
+            System.out.print("Enter a number between 1 and 10: ");
+            System.out.print(factorial(getInteger(1, 10)));
+            System.out.println("\nDo you want to try again? [y/N]");
+            String keepGoing = sc.next();
+            confirmation = keepGoing.equalsIgnoreCase("y");
+        } while (confirmation);
     }
 
     public static int factorial(long n) {
