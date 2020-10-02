@@ -8,12 +8,11 @@ public class MethodsExercises {
 //        System.out.print("Enter a number between 1 and 10: ");
 //        int userInput = getInteger(1, 10);
 
-
         //factorial
         Boolean confirmation;
         do {
-            System.out.print("Enter a number between 1 and 10: ");
-            System.out.print(factorial(getInteger(1, 10)));
+            System.out.print("Enter a number between 1 and 16: ");
+            System.out.print(factorial(getInteger(1, 16)));
             System.out.println("\nDo you want to try again? [y/N]");
             String keepGoing = sc.next();
             confirmation = keepGoing.equalsIgnoreCase("y");
@@ -28,16 +27,16 @@ public class MethodsExercises {
         }
     }
 
-    public static int getInteger(int min, int max) {
+    public static int getInteger(long min, long max) {
         Scanner scan = new Scanner(System.in);
-        int userInput = scan.nextInt();
+        long userInput = scan.nextInt();
         if (userInput > min && userInput < max) {
             System.out.println("Valid number.");
         } else {
             System.out.println("Invalid number.\n Try again: ");
             getInteger(min, max);
         }
-        return userInput;
+        return (int) userInput;
     }
 
     public static void adding(int a, int b) {
