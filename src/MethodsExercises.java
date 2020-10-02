@@ -3,18 +3,30 @@ import java.util.Scanner;
 public class MethodsExercises {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+//        System.out.print("Enter a number between 1 and 10: ");
+//        int userInput = getInteger(1, 10);
+
         System.out.print("Enter a number between 1 and 10: ");
-        int userInput = getInteger(1, 10);
+        int userInput = sc.nextInt();
+        System.out.println(factorial(userInput));
+    }
+
+    public static int factorial(long n) {
+        if (n == 0) {
+            return 1;
+        } else {
+            return (int) (n * factorial(n - 1));
+        }
     }
 
     public static int getInteger(int min, int max) {
-        Scanner sc = new Scanner(System.in);
-        int userInput = sc.nextInt();
+        Scanner scan = new Scanner(System.in);
+        int userInput = scan.nextInt();
         if (userInput > min && userInput < max) {
             System.out.println("Valid number.");
         } else {
             System.out.println("Invalid number.\n Try again: ");
-            getInteger(min,max);
+            getInteger(min, max);
         }
         return userInput;
     }
