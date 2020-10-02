@@ -3,12 +3,22 @@ import java.util.Scanner;
 public class MethodsExercises {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
+        //getInteger
 //        System.out.print("Enter a number between 1 and 10: ");
 //        int userInput = getInteger(1, 10);
 
+
+        //factorial
+        Boolean confirmation;
         System.out.print("Enter a number between 1 and 10: ");
-        int userInput = sc.nextInt();
-        System.out.println(factorial(userInput));
+        System.out.print(factorial(getInteger(1, 10)));
+//        do {
+//            System.out.println(factorial(getInteger(1, 10)));
+//            System.out.println("Do you want to try again? [y/N]");
+//            String keepGoing = sc.next();
+//            confirmation = keepGoing.equalsIgnoreCase("y");
+//        } while (confirmation);
     }
 
     public static int factorial(long n) {
