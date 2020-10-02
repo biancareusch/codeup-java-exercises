@@ -1,11 +1,22 @@
+import java.util.Scanner;
+
 public class MethodsExercises {
     public static void main(String[] args) {
-        adding(2, 6);
-        subtracting(9, 2);
-        multiplication(6, 4);
-        division(9, 3);
-        modulus(9, 4);
-        multi(3, 5);
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number between 1 and 10: ");
+        int userInput = getInteger(1, 10);
+    }
+
+    public static int getInteger(int min, int max) {
+        Scanner sc = new Scanner(System.in);
+        int userInput = sc.nextInt();
+        if (userInput > min && userInput < max) {
+            System.out.println("Valid number.");
+        } else {
+            System.out.println("Invalid number.\n Try again: ");
+            getInteger(min,max);
+        }
+        return userInput;
     }
 
     public static void adding(int a, int b) {
@@ -33,8 +44,6 @@ public class MethodsExercises {
         System.out.println(result);
     }
 
-
-
     public static void multi(int factor, int base) {
         if (factor == 0) {
             System.out.println(0);
@@ -42,14 +51,13 @@ public class MethodsExercises {
             System.out.println(base);
         } else if (factor == 2) {
             System.out.println(base + base);
-        } else if (factor == 3){
+        } else if (factor == 3) {
             System.out.println(base + base + base);
-        } else if (factor == 4){
+        } else if (factor == 4) {
             System.out.println(base + base + base + base);
-        }else{
+        } else {
             System.out.println("sorry...");
         }
-
     }
 }
 
