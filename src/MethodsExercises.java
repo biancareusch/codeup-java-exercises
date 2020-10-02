@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 public class MethodsExercises {
     public static void main(String[] args) {
@@ -10,13 +11,29 @@ public class MethodsExercises {
 
         //factorial
         Boolean confirmation;
-        do {
-            System.out.print("Enter a number between 1 and 16: ");
-            System.out.print(factorial(getInteger(1, 16)));
+//        do {
+//            System.out.print("Enter a number between 1 and 16: ");
+//            System.out.print(factorial(getInteger(1, 16)));
+//            System.out.println("\nDo you want to try again? [y/N]");
+//            String keepGoing = sc.next();
+//            confirmation = keepGoing.equalsIgnoreCase("y");
+//        } while (confirmation);
+
+        // Dice
+        do{
+        System.out.print("Enter the number of sides for a pair of dice: ");
+        int n = sc.nextInt();
+        int dice1 = dice(n);
+        int dice2 = dice(n);
+            System.out.println(dice1 + " + " + dice2 + " = " + (dice1 + dice2));
             System.out.println("\nDo you want to try again? [y/N]");
             String keepGoing = sc.next();
             confirmation = keepGoing.equalsIgnoreCase("y");
-        } while (confirmation);
+        }while(confirmation);
+    }
+
+    public static int dice( int n) {
+            return (int)(Math.random() * n) + 1;
     }
 
     public static int factorial(long n) {
