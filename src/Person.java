@@ -1,5 +1,6 @@
 public class Person {
-    private String name = "somebody";
+
+        private String name ;
 
     public String getName() {
 //TODO: return the person's name
@@ -21,5 +22,22 @@ Person me = new Person();
         me.getName();
         me.setName("bianca");
         me.sayHello();
+
+//        Person person1 = new Person("John");
+//        Person person2 = new Person("John");
+//        System.out.println(person1.getName().equals(person2.getName()));
+//        System.out.println(person1 == person2);
+
+//        Person person1 = new Person("John");
+//        Person person2 = person1;
+//        System.out.println(person1 == person2);
+
+//        Person person1 = new Person("John");
+//        Person person2 = person1;
+//        System.out.println(person1.getName());
+//        System.out.println(person2.getName());
+//        person2.setName("Jane");
+//        System.out.println(person1.getName());
+//        System.out.println(person2.getName());
     }
 }
