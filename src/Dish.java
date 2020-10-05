@@ -3,14 +3,19 @@ public class Dish {
     public String nameOfDish;
     public Boolean wouldRecommend;
 
-    public Dish(int cost, String name, boolean recommend) {
-      costInCents = cost;
-        nameOfDish = name;
-        wouldRecommend = recommend;
-    }
+//      or
+//    public Dish(int cost, String name, boolean recommend) {
+//      costInCents = cost;
+//        nameOfDish = name;
+//        wouldRecommend = recommend;
+//    }
 
     public void printSummary(){
-        System.out.printf("\nCost: %d \nName: %s \nRecommend: %b", costInCents, nameOfDish, wouldRecommend);
+        System.out.printf(
+                "%nCost: %d%nName: %s%nRecommend: %b",
+                costInCents,
+                nameOfDish,
+                wouldRecommend);
     }
 
 

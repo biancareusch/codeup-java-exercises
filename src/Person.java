@@ -2,9 +2,12 @@ public class Person {
 
         private String name ;
 
+        public Person(String name){
+            name = name;
+        }
     public String getName() {
 //TODO: return the person's name
-        return this.name;
+        return Person.this.name;
     }
 
     public void setName(String name) {
@@ -18,9 +21,9 @@ public class Person {
     }
 
     public static void main(String[] args) {
-Person me = new Person();
-        me.getName();
-        me.setName("bianca");
+Person me = new Person("Bianca");
+        System.out.println(me.getName());
+        me.setName("Bebe");
         me.sayHello();
 
 //        Person person1 = new Person("John");
@@ -28,9 +31,9 @@ Person me = new Person();
 //        System.out.println(person1.getName().equals(person2.getName()));
 //        System.out.println(person1 == person2);
 
-//        Person person1 = new Person("John");
-//        Person person2 = person1;
-//        System.out.println(person1 == person2);
+        Person person1 = new Person("John");
+        Person person2 = person1;
+        System.out.println(person1 == person2);
 
 //        Person person1 = new Person("John");
 //        Person person2 = person1;
