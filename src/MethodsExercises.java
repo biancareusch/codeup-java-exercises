@@ -56,29 +56,34 @@ public class MethodsExercises {
         return (int) userInput;
     }
 
-    public static void adding(int a, int b) {
+    public static int adding(int a, int b) {
         int result = a + b;
         System.out.println(result);
+        return result;
     }
 
-    public static void subtracting(int a, int b) {
+    public static int subtracting(int a, int b) {
         int result = a - b;
         System.out.println(result);
+        return result;
     }
 
-    public static void multiplication(int a, int b) {
+    public static int multiplication(int a, int b) {
         int result = a * b;
         System.out.println(result);
+        return result;
     }
 
-    public static void division(int a, int b) {
+    public static int division(int a, int b) {
         int result = a / b;
         System.out.println(result);
+        return result;
     }
 
-    public static void modulus(int a, int b) {
+    public static int modulus(int a, int b) {
         int result = a % b;
         System.out.println(result);
+        return result;
     }
 
     public static void multi(int factor, int base) {
