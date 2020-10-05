@@ -1,4 +1,4 @@
-public class DishTest {
+public class DishTest extends DishTools {
     public static void main(String[] args) {
 //        Dish dish1 = new Dish(1099, "Burger", true);
         //or
@@ -12,7 +12,7 @@ public class DishTest {
 
         shoutDishName(dish2);
         analyzeDishCost(dish2);
-        flipRecommendations(dish2);
+        flipRecommendation(dish2);
 
     }
 }
