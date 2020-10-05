@@ -8,18 +8,16 @@ public class MethodsExercises {
 //dice(sc);
 
         //getInteger
-//        System.out.print("Enter a number between 1 and 10: ");
-//        int userInput = getInteger(1, 10);
+        int userInput = getInteger(1, 10);
 
         //factorial
         Boolean confirmation;
-//        do {
-//            System.out.print("Enter a number between 1 and 16: ");
-//            System.out.print(factorial(getInteger(1, 16)));
-//            System.out.println("\nDo you want to try again? [y/N]");
-//            String keepGoing = sc.next();
-//            confirmation = keepGoing.equalsIgnoreCase("y");
-//        } while (confirmation);
+        do {
+            System.out.print(factorial(getInteger(1, 16)));
+            System.out.println("\nDo you want to try again? [y/N]");
+            String keepGoing = sc.next();
+            confirmation = keepGoing.equalsIgnoreCase("y");
+        } while (confirmation);
 
     }
 
@@ -51,7 +49,7 @@ public class MethodsExercises {
 
     public static int getInteger(long min, long max) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Type in a number between " + min + " and " + max);
+        System.out.println("Type in a number between " + min + " and " + max + ": ");
         long userInput = scan.nextInt();
         if (userInput < min) {
             System.out.println("Number is less than " + min);
