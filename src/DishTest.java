@@ -9,5 +9,10 @@ public class DishTest {
         dish2.wouldRecommend = false;
 
         dish2.printSummary();
+
+        shoutDishName(dish2);
+        analyzeDishCost(dish2);
+        flipRecommendations(dish2);
+
     }
 }
