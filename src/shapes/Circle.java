@@ -10,6 +10,7 @@ public class Circle {
         System.out.println(message + count);
         return count;
     }
+
     public Circle(double radius){
         this.radius = radius;
     }

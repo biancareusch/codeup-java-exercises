@@ -14,7 +14,7 @@ public class CircleApp {
             System.out.println("Your circle radius is " + radius);
             System.out.println("The area of your circle is " + circle1.getArea());
             System.out.println("The circumference of your circle is " + circle1.getCircumference());
-//            circle1.counting("Amount of circles you have created: ", 0);
+            circle1.counting("Amount of circles you have created: ", 0);
             confirmation = userInput.yesNo("Create another circle? ");
         } while (confirmation);
 
