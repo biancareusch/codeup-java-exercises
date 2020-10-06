@@ -3,11 +3,16 @@ public class Person {
         private String name ;
 
         public Person(String name){
+            this.name = name;
         }
+
+        public Person() {
+
+         }
 
     public String getName() {
 //TODO: return the person's name
-        return Person.this.name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -17,11 +22,11 @@ public class Person {
 
     public void sayHello() {
 //TODO: print a message to the console using the person's name
-        System.out.println("Hello, " + name);
+        System.out.println("Hello, " + this.name);
     }
 
     public static void main(String[] args) {
-Person me = new Person("Bianca");
+        Person me = new Person("Bianca");
         System.out.println(me.getName());
         me.setName("Bebe");
         me.sayHello();
@@ -34,7 +39,7 @@ Person me = new Person("Bianca");
 //        Person person1 = new Person("John");
 //        Person person2 = person1;
 //        System.out.println(person1 == person2);
-
+//
         Person person1 = new Person("John");
         Person person2 = person1;
         System.out.println(person1.getName());
