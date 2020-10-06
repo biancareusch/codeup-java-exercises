@@ -14,15 +14,14 @@ public class Input {
     }
 
     public String getString(String prompt) {
-        System.out.println("prompt = " + prompt);
-        System.out.println("Enter a sentence :");
+        System.out.println(prompt);
         String userInput = scanner.nextLine();
         System.out.println("Your sentence is ' " + userInput + "'.");
         return userInput;
     }
     public boolean yesNo() {
         System.out.println("Yes or No?");
-        String userInput = scanner.nextLine();
+        String userInput = scanner.next();
         if (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")) {
             System.out.println(true);
             return true;
@@ -33,9 +32,8 @@ public class Input {
     }
 
     public boolean yesNo(String prompt) {
-        System.out.println("prompt = " + prompt);
-        System.out.println("Yes or No?");
-        String userInput = scanner.nextLine();
+        System.out.println(prompt);
+        String userInput = scanner.next();
         if (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")) {
             System.out.println(true);
             return true;
@@ -60,8 +58,7 @@ public class Input {
         return input;
     }
     public int getInt(int min, int max, String prompt) {
-        System.out.println("prompt = " + prompt);
-        System.out.println("Enter a number between " + min + " and " + max + " :");
+        System.out.println(prompt);
         int input = scanner.nextInt();
         if (input < min) {
             System.out.println("Your number needs to be higher.");
@@ -82,8 +79,7 @@ public class Input {
         return input;
     }
     public int getInt(String prompt) {
-        System.out.println("prompt = " + prompt);
-        System.out.println("Enter a number : ");
+        System.out.println(prompt);
         int input = scanner.nextInt();
         System.out.println("Your number is " + input);
         return input;
@@ -105,8 +101,7 @@ public class Input {
         return input;
     }
     public double getDouble(double min, double max, String prompt) {
-        System.out.println("prompt = " + prompt);
-        System.out.println("Enter a double between " + min + " and " + max + " :");
+        System.out.println(prompt);
         double input = scanner.nextDouble();
         if (input < min) {
             System.out.println("Your number needs to be higher.");
@@ -128,8 +123,7 @@ public class Input {
     }
 
     public double getDouble(String prompt) {
-        System.out.println("prompt = " + prompt);
-        System.out.println("Enter a double :");
+        System.out.println(prompt);
         double input = scanner.nextDouble();
         System.out.println("Your number is " + input);
         return input;
