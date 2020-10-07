@@ -4,25 +4,27 @@ public class Movie {
     private String name;
     private String category;
 
-//    public Movies(String name, String category) {
-//        this.name = name;
-//        this.category = category;
-//    }
+    public Movie(String movieName, String movieCategory) {
+        this.name = movieName;
+        this.category = movieCategory;
+    }
 
     public String getMovieName(){
+
         return this.name ;
     }
 
     public String getMovieCategory(){
+
         return this.category;
     }
 
-    public void setMovieName(String name){
-        this.name = name;
+    public void setMovieName(String newName){
+        this.name = newName;
     }
 
-    public void setMovieCategory(String category){
-        this.category = category;
+    public void setMovieCategory(String newCategory){
+        this.category = newCategory;
     }
 
 }
