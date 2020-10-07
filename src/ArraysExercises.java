@@ -13,25 +13,23 @@ public class ArraysExercises extends Person {
         persons[1] = new Person("John");
         persons[2] = new Person("Bianca");
 
-        for (Person person : persons) {
-            person.sayHello();
-        }
+//        for (Person person : persons) {
+//            person.sayHello();
+//        }
 
-int n = 5;
-        System.out.println(Arrays.toString(addPerson(n, persons, new Person("Lisa"))));
+        addPerson(persons, new Person("Monkey"));
 
     }
 
 
-    public static Person[] addPerson(int n, Person[] persons, Person name) {
+    public static void addPerson(Person[] persons, Person newPerson) {
 
-        Person newArray[] = new Person[n + 1];
-        for (int i = 0; i < n; i++) {
-            newArray[i] = persons[i];
-
-            newArray[n] = name;
+        Person[] copyOfPerson = Arrays.copyOf(persons, persons.length + 1);
+        copyOfPerson[copyOfPerson.length - 1] = newPerson;
+        for (Person newbie : copyOfPerson) {
+            System.out.println(newbie.getName());
         }
-        return newArray;
+
 
     }
 }
