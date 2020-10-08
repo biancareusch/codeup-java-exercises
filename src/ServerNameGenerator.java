@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class ServerNameGenerator {
@@ -30,7 +31,7 @@ public class ServerNameGenerator {
         return (int) (Math.random() * n) + 1;
     }
 
-    public static void randomName(String[] arr1, String[] arr2) {
+    public static String randomName(String[] arr1, String[] arr2) {
         int n = 9;
         int randomNum = randomize(n);
         int randomNum2 = randomize(n);
@@ -40,10 +41,18 @@ public class ServerNameGenerator {
 
         System.out.print("Here's your server name: \n");
         System.out.println(adjective + "-" + noun);
+        return "";
     }
 
     public static void main(String[] args) {
         randomName(adjectives, nouns);
     }
-}
 
+
+//public static String getWord(String[] words){
+//    Random rnd = new Random();
+//    int randomIndex = rnd.nextInt(words.length);
+//    return words[randomIndex];
+//}
+
+}
