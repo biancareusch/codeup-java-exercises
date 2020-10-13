@@ -15,10 +15,11 @@ public class MoviesApplication {
                         "\n2 - view movies in animated category" +
                         "\n3 - view movies in drama category" +
                         "\n4 - view movies in horror category" +
-                        "\n5 - view movies in sci-fi category"
+                        "\n5 - view movies in sci-fi category" +
+                        "\n6 - add a movie"
         );
         Input userInput = new Input();
-        int userSelect = userInput.getInt(0,5,"Enter your menu option: ");
+        int userSelect = userInput.getInt(0, 6, "Enter your menu option: ");
         Movie[] allMovies = MoviesArray.findAll();
 
         switch (userSelect) {
@@ -39,7 +40,18 @@ public class MoviesApplication {
             case 5:
                 display(allMovies, "scifi");
                 break;
+            case 6:
+                Input userName = new Input();
+                String newMovieName = userName.getString("Enter new Movie name: ");
+                Input userCategory = new Input();
+                String newMovieCategory = userCategory.getString("Enter new Movie category: ");
+                System.out.println("newMovieCategory = " + newMovieCategory);
+
+                addMovie(allMovies, new Movie(newMovieName, newMovieCategory));
+                break;
         }
+
+
 
     }
 
@@ -52,17 +64,33 @@ public class MoviesApplication {
         }
     }
 
-        public static void display (Movie[]allMovies, String category){
-            for (Movie movie : allMovies) {
-                String movieCategory = movie.getMovieCategory();
-                if (movieCategory.equalsIgnoreCase(category)) {
-                    System.out.println(movie.getMovieName() + " -- " + movie.getMovieCategory());
-                }
+    public static void display(Movie[] allMovies, String category) {
+        for (Movie movie : allMovies) {
+            String movieCategory = movie.getMovieCategory();
+            if (movieCategory.equalsIgnoreCase(category)) {
+                System.out.println(movie.getMovieName() + " -- " + movie.getMovieCategory());
             }
         }
+    }
 
+    public static Movie[] addMovie(Movie[] allMovies, Movie newMovie) {
+        Movie[] tempArr = Arrays.copyOf(allMovies, allMovies.length + 1);
+        tempArr[tempArr.length - 1] = newMovie;
+        for (Movie singleMovie : tempArr) {
+            System.out.println(singleMovie.getMovieName() + " -- " + singleMovie.getMovieCategory());
+        }
+        return tempArr;
+    }
 
-
-
+//    public static Movie[] addMovie(Movie[] allMovies, Movie newInput) {
+//
+//        Movie[] tempArr = Arrays.copyOf(allMovies, allMovies.length + 1);
+//        tempArr[tempArr.length - 1] = newMovie;
+//        for (Movie singleMovie : tempArr) {
+//            System.out.println(singleMovie.getMovieName() + " -- " + singleMovie.getMovieCategory());
+//        }
+//        return tempArr;
+//    }
+//
 
 }
