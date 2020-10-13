@@ -34,30 +34,37 @@ public class GradesApplication {
         students.put("sammy", stu3);
         students.put("chelseaa", stu4);
 
-        Scanner scan = new Scanner(System.in);
 
         System.out.println("Welcome !");
         System.out.println("\nHere are the Github usernames of our students: \n");
         for (String key : students.keySet()) {
             System.out.print(" |" + key + "| ");
         }
+        moreInfo(students);
+    }
 
+
+    public static void moreInfo(HashMap students) {
+        Scanner scan = new Scanner(System.in);
+        Boolean confirmation;
+        do {
         System.out.println("\nWhat student would you like more information on? ");
         String userInput = scan.nextLine().trim().toLowerCase();
 
-        if(students.containsKey(userInput)) {
+        if (students.containsKey(userInput)) {
             Student chosen = (Student) students.get(userInput);
             System.out.println("Name: " + chosen.getName() + " - Github Username: " + userInput +
                     "\nCurrent Average : " + chosen.getGradeAverage());
-        }else {
+        } else {
             System.out.println("Sorry, no student found with the Github username of \"" + userInput + "\"");
         }
-        System.out.println("Would you like to see another student?");
-        String userBool = scan.nextLine();
 
-
-
-
-
+            System.out.println("Would you like to see another student? [y/N]");
+            String userBool = scan.nextLine();
+            confirmation = userBool.equalsIgnoreCase("y") ||userBool.equalsIgnoreCase("yes") ;
+        } while (confirmation);
+        System.out.println("Goodbye, and have a wonderful day!");
     }
+
 }
+
