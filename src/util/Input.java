@@ -70,9 +70,9 @@ public class Input {
             String input = scanner.nextLine();
             num = Integer.parseInt(input);
         } catch (RuntimeException re) {
+            System.err.println("You must enter an integer.");
             return getInt(min, max, prompt);
         }
-
         if (num < min) {
             System.out.println("Your number needs to be higher.");
             getInt(min, max);
