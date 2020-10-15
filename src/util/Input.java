@@ -3,11 +3,11 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-private Scanner scanner;
+    private Scanner scanner;
 
-public Input(){
-    scanner = new Scanner(System.in);
-}
+    public Input() {
+        scanner = new Scanner(System.in);
+    }
 
     public String getString() {
         System.out.println("Enter a sentence :");
@@ -22,6 +22,7 @@ public Input(){
         System.out.println("Your sentence is ' " + userInput + "'.");
         return userInput;
     }
+
     public boolean yesNo() {
         System.out.println("Yes or No?");
         String userInput = scanner.next();
@@ -45,6 +46,7 @@ public Input(){
             return false;
         }
     }
+
     public int getInt(int min, int max) {
 
         System.out.println("Enter a number between " + min + " and " + max + " :");
@@ -60,20 +62,29 @@ public Input(){
         }
         return input;
     }
+
     public int getInt(int min, int max, String prompt) {
         System.out.println(prompt);
-        int input = scanner.nextInt();
-        if (input < min) {
+        int num;
+        try {
+            String input = scanner.nextLine();
+            num = Integer.parseInt(input);
+        } catch (RuntimeException re) {
+            System.err.println("You must enter an integer.");
+            return getInt(min, max, prompt);
+        }
+        if (num < min) {
             System.out.println("Your number needs to be higher.");
             getInt(min, max);
-        } else if (input > max) {
+        } else if (num > max) {
             System.out.println("Your number needs to be lower.");
             getInt(min, max);
         } else {
-            System.out.println("Your number is " + input);
+            System.out.println("Your number is " + num);
         }
-        return input;
+        return num;
     }
+
 
     public int getInt() {
         System.out.println("Enter a number : ");
@@ -81,6 +92,7 @@ public Input(){
         System.out.println("Your number is " + input);
         return input;
     }
+
     public int getInt(String prompt) {
         System.out.println(prompt);
         int input = scanner.nextInt();
@@ -103,6 +115,7 @@ public Input(){
         }
         return input;
     }
+
     public double getDouble(double min, double max, String prompt) {
         System.out.println(prompt);
         double input = scanner.nextDouble();
